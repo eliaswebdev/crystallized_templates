@@ -8,14 +8,9 @@ module Templates
         puts 'generators/templates/views_generators downloading files....'
       end
 
-      def copy_templates
-        puts 'copy_templates'
-        require 'fileutils'
-        FileUtils.cp("/lib/templates/#{%w(TEST.TXT)}", '/app')
-        # puts "mkdir -p lib/templates/erb/scaffold && \ cp $(bundle show railties)/lib/rails/generators/erb/scaffold/templates/* lib/templates/erb/scaffold"
+      def download_templates(theme)
+        puts "downloading templates..."
       end
-
-
     end
   end
 end
