@@ -6,6 +6,7 @@ module Templates
 
       def init
         puts "generators/templates/views_generators downloading files.... #{file_name}"
+        return 'default' if file_name == 'default'
       end
 
       def download_templates
@@ -13,4 +14,4 @@ module Templates
       end
     end
   end
-end
+end 
