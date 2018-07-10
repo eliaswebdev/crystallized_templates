@@ -5,11 +5,11 @@ module Templates
       source_root File.expand_path('../../../lib/templates', __FILE__)
 
       def init
-        puts 'generators/templates/views_generators downloading files....'
+        puts "generators/templates/views_generators downloading files.... #{file_name}"
       end
 
       def download_templates
-        puts "downloading templates..."
+        puts "downloading templates...  #{file_name}"
       end
     end
   end
