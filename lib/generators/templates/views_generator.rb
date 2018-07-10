@@ -11,7 +11,7 @@ module Templates
       def copy_templates
         puts 'copy_templates'
         require 'fileutils'
-        FileUtils.cp %w(TEST.TXT), '/app'
+        FileUtils.cp("/lib/templates/#{%w(TEST.TXT)}", '/app')
         # puts "mkdir -p lib/templates/erb/scaffold && \ cp $(bundle show railties)/lib/rails/generators/erb/scaffold/templates/* lib/templates/erb/scaffold"
       end
 
