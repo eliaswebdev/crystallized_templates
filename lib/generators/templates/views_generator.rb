@@ -1,6 +1,6 @@
 module Templates
   module Generators
-    # rails g kaminari:views THEME
+    # rails g templates:views
     class ViewsGenerator < Rails::Generators::NamedBase # :nodoc:
       source_root File.expand_path('../../../lib/templates', __FILE__)
 
