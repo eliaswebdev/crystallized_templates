@@ -5,7 +5,6 @@ module Templates
       source_root File.expand_path('../../../lib/templates', __FILE__)
 
       def init
-        file_name = 'default' if file_name == nil
         puts "generators/templates/views_generators downloading files.... #{file_name}"
       end
 
