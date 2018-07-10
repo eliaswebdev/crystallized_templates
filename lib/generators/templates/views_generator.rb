@@ -8,7 +8,7 @@ module Templates
         puts 'generators/templates/views_generators downloading files....'
       end
 
-      def download_templates(theme)
+      def download_templates
         puts "downloading templates..."
       end
     end
