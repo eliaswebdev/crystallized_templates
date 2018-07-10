@@ -1,0 +1,16 @@
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+<p>
+  <strong><%= attribute.human_name %>:</strong>
+  <%%= @<%= singular_table_name %>.<%= attribute.name %> %>
+</p>
+
+<% end -%>
+
+<div class="actions">
+  <%%= link_to t('.edit', :default => t("helpers.links.edit")),
+                            edit_<%= singular_route_name %>_path(@<%= singular_table_name %>), 
+                            class: 'btn btn-primary btn-lg btn-rounded' %>
+
+  <%%= link_to 'Back', <%= index_helper %>_path, 
+                            class: 'btn btn-outline-secondary btn-lg btn-rounded' %>
+</div>

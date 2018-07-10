@@ -1,0 +1,15 @@
+<%%= bootstrap_form_with(model: <%= model_resource_name %>, local: true, layout: :vertical) do |f| %>
+<% attributes.each do |attribute| -%>
+<% if attribute.password_digest? -%>
+  <%%= f.password_field :password %>
+  <%%= f.password_field :password_confirmation %>
+<% else -%>
+  <%%= f.<%= attribute.field_type %> :<%= attribute.column_name %> %>
+<% end -%>
+<% end -%>
+
+  <div class="actions">
+    <%%= f.button class: "btn btn-primary btn-lg btn-rounded", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Salvando..."} %>
+    <%%= link_to 'Back', <%= index_helper %>_path, class: 'btn btn-outline-secondary btn-lg btn-rounded' %>
+  </div>
+<%% end %>
